@@ -26,6 +26,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getData() {
+        var book = Book("Harry Potter: Complete 8-Film Collection (DVD, 2011, 8-Disc Set)", "J.K. Rowling", "http://i.ebayimg.com/00/$(KGrHqV,!g0E6ZCwQ)wpBOuWbUNB,g~~_6.JPG?set_id=89040003C1")
+        books.add(book)
+        book = Book("test", "test", "test")
+        books.add(book)
+        bookAdapter?.setData(books)
+        bookAdapter?.notifyDataSetChanged()
     }
 
 }
