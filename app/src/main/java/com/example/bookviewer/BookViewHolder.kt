@@ -8,13 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 class BookViewHolder(bookView: View) : RecyclerView.ViewHolder(bookView) {
     var mTitleView: TextView? = null
     var mAuthorView: TextView? = null
-    var mImagView: ImageView? = null
+    var mImageView: ImageView? = null
 
 
 
     init {
         mTitleView = bookView.findViewById(R.id.titleText)
         mAuthorView = bookView.findViewById(R.id.authorText)
-        mImagView = bookView.findViewById(R.id.bookImage)
+        mImageView = bookView.findViewById(R.id.bookImage)
     }
 }
