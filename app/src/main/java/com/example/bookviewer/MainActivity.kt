@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerview)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        bookAdapter = BookAdapter()
+        bookAdapter = BookAdapter(this)
         recyclerView.adapter = bookAdapter
         mockData()
     }

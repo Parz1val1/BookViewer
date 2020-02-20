@@ -28,7 +28,6 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
-        android:text="Harry Potter Years 1-7 by J.K Rowling and Inc. Staff Scholastic (2007, Hardcover)"
         android:textColor="#ffffff"
         app:layout_constraintStart_toEndOf="@+id/bookImage"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +41,6 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
-        android:text="Author: J.K. Rowling"
         android:textColor="#e0e0e0"
         app:layout_constraintTop_toBottomOf="@+id/titleText"
         app:layout_constraintStart_toEndOf="@id/bookImage"/>

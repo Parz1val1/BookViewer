@@ -1,14 +1,17 @@
 package com.example.bookviewer
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 
-class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
+class BookAdapter(context: Context) : RecyclerView.Adapter<BookViewHolder>() {
 
 
     var books: ArrayList<Book> = arrayListOf()
+    val context: Context = context
 
     fun setData(books: ArrayList<Book>){
         this.books = books
@@ -26,7 +29,7 @@ class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val book: Book = books[position]
-        Picasso.get().load(book.image).into(holder.mImageView)
+        //Picasso.get().load(book.image).into(holder.mImageView)
         holder.mTitleView?.text = book.title
         holder.mAuthorView?.text = book.author
     }
