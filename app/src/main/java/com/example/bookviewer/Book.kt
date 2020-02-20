@@ -1,3 +1,9 @@
 package com.example.bookviewer
 
-data class Book(var title: String?, var author: String?, var image: String?)
+import com.google.gson.annotations.SerializedName
+
+data class Book(
+    var title: String?,
+    var author: String?,
+    @SerializedName("imageURL") var image: String?
+)

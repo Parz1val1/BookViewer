@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 
 class BookAdapter(context: Context) : RecyclerView.Adapter<BookViewHolder>() {
@@ -29,8 +28,10 @@ class BookAdapter(context: Context) : RecyclerView.Adapter<BookViewHolder>() {
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val book: Book = books[position]
-        //Picasso.get().load(book.image).into(holder.mImageView)
+        Picasso.get().load(book.image).placeholder(R.drawable.ic_crop_original_black_24dp).into(holder.mImageView)
         holder.mTitleView?.text = book.title
-        holder.mAuthorView?.text = book.author
+        book.author?.let {
+            holder.mAuthorView?.text = ("Author: " + book.author)
+        }
     }
 }
